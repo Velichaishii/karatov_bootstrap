@@ -1,1 +1,118 @@
+@import "reset"
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap"
+@import "style-bootstrap"
 @import "sprites"
+
+
+.achievements-b
+	padding-top: 13px
+	padding-bottom: 10px
+	font-size: 0
+
+.achievements-b__circle
+	display: inline-block
+	vertical-align: middle
+	width: 54px
+	height: 54px
+	border: 1px solid #fff
+	-webkit-border-radius: 50%
+	-moz-border-radius: 50%
+	border-radius: 50%
+	margin-right: 14px
+	position: relative
+
+.achievements-b__caption
+	display: inline-block
+	vertical-align: middle
+	width: calc(100% - 69px)
+	font-family: Roboto-Regular
+	font-size: 14px
+	color: #fff
+
+.service-b
+	height: 151px
+	padding: 30px 0
+	border-bottom: 1px solid #e0e1e1
+
+.service-b__container
+	height: 100%
+
+.service-b__row
+	height: 100%
+
+.service-b__col
+	height: 100%
+
+.service-b__entry-b
+	display: flex
+
+.service-b__save-b
+	display: flex
+
+.call-b
+	display: flex
+	height: 100%
+	align-items: center
+
+.call-b__link
+	font-size: 26px
+
+.call-b__action
+	display: block
+	width: 100%
+
+.logo-b__link
+	display: inline-block
+	font-size: 0
+
+.logo-b__img
+	font-size: 0
+
+.service-b__int-b
+	display: flex
+	height: 100%
+	align-items: center
+	justify-content: flex-end
+
+.gray
+	background: #3c5568
+
+.tracery
+	height: 8px
+	background: url("../images/tracery.jpg")
+
+.ico
+	display: inline-block
+
+	&_abs
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+
+.ico-text
+	height: 18px
+	font-size: 18px
+	font-style: normal
+	line-height: 18px
+	color: #fff
+
+.ico-factory
+	+retina-sprite($factory-group)
+
+.ico-rowsup
+	+retina-sprite($rowsup-group)
+
+.ico-shop
+	+retina-sprite($shop-group)
+
+.ico-twentyfive
+	+retina-sprite($twentyfive-group)
+
+.ico-man
+	+retina-sprite($man-group)
+
+.ico-heart
+	+retina-sprite($heart-group)
+
+@import "style-adaptive.sass"

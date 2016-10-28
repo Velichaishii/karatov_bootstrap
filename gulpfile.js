@@ -134,7 +134,7 @@ gulp.task('sprite', function() {
 });
 
 /* SASS --------------------------------------------------------------------- */
-gulp.task('sass', ['sprite'], function() {
+gulp.task('sass', function() {
     return gulp.src(sources.sass.src)
         .pipe(plumber({
             errorHandler: onError
@@ -207,8 +207,8 @@ gulp.task('watch', function () {
     gulp.watch(sources.sass.watch, ['sass']);
     // gulp.watch(sources.pug.watch, ["pug"]);
     gulp.watch(sources.twig.watch, ["twig"]);
-    gulp.watch(sources.images.icons.default, ["sass"]);
+    gulp.watch(sources.images.icons.default, ["sass", "sprite"]);
     gulp.watch(sources.js.watch).on('change', browserSync.reload);
 });
 
-gulp.task('default', ['browser-sync', 'twig', 'sass', 'watch']);
+gulp.task('default', ['browser-sync', 'twig', 'sass', 'watch', 'sprite']);
