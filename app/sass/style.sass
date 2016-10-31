@@ -1,7 +1,9 @@
 @import "reset"
+@import "mixins"
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap"
 @import "style-bootstrap"
 @import "sprites"
+
 
 
 .achievements-b
@@ -29,6 +31,11 @@
 	font-size: 14px
 	color: #fff
 
+.btn-close-wrap
+	position: absolute
+	top: 10px
+	right: 10px
+
 .service-b
 	height: 151px
 	padding: 30px 0
@@ -45,21 +52,52 @@
 
 .service-b__entry-b
 	display: flex
+	margin-right: 15%
+	align-items: center
 
 .service-b__save-b
 	display: flex
+	align-items: center
 
 .call-b
 	display: flex
 	height: 100%
 	align-items: center
 
+.call-b__tel-b
+	padding-top: 20px
+	margin-right: 17%
+	position: relative
+
+.call-b__dd
+	cursor: pointer
+
+	&:hover, &:active, &:focus
+		color: #f45302
+
+		&:visited
+			&:hover, &:active, &:focus
+				color: #f45302
+
 .call-b__link
 	font-size: 26px
+	cursor: pointer
+	+trans()
 
-.call-b__action
-	display: block
-	width: 100%
+	&:hover, &:active, &:focus
+		text-decoration: none
+		color: #f45302
+
+		&:visited
+			&:hover, &:active, &:focus
+				text-decoration: none
+				color: #f45302
+
+.call-b__text
+	position: relative
+	z-index: 20
+	font-family: Circle-Light
+	font-size: 15px
 
 .logo-b__link
 	display: inline-block
@@ -73,6 +111,53 @@
 	height: 100%
 	align-items: center
 	justify-content: flex-end
+
+.service-b__ico-wrap
+	margin-right: 10px
+
+.service-b__btn
+	font-family: Circle-Light
+	font-size: 15px
+	cursor: pointer
+
+	&:hover, &:active, &:focus
+		color: #f45302
+
+		&:visited
+			&:hover, &:active, &:focus
+				color: #f45302
+
+.arrow-left
+	width: 20px
+	height: 20px
+	display: block
+	border-top: 2px solid #a7a9ac
+	border-left: 2px solid #a7a9ac
+	position: absolute
+	top: 50%
+	left: 20px
+	transform: translateY(-50%) rotate(-45deg)
+
+.arrow-right
+	width: 20px
+	height: 20px
+	display: block
+	border-top: 2px solid #a7a9ac
+	border-left: 2px solid #a7a9ac
+	position: absolute
+	top: 50%
+	right: 20px
+	transform: translateY(-50%) rotate(135deg)
+
+
+
+
+
+.mb-25
+	margin-bottom: 25px
+
+.text-gray
+	color: #9a9ea0
 
 .gray
 	background: #3c5568
@@ -114,5 +199,49 @@
 
 .ico-heart
 	+retina-sprite($heart-group)
+
+.ico-magnifier
+	+retina-sprite($magnifier-group)
+
+.arrow-down
+	padding-right: 15px
+	position: relative
+
+	&:before
+		content: ''
+		width: 7px
+		height: 7px
+		border-right: 2px solid #c8c5c4
+		border-bottom: 2px solid #c8c5c4
+		position: absolute
+		top: 5px
+		right: 0
+		+rotate(45)
+		+trans()
+
+.btn-close
+	cursor: pointer
+	+retina-sprite($cross-group)
+
+.btn_white
+	padding: 0 20px
+	background: #fff
+	-webkit-border-radius: 0
+	-moz-border-radius: 0
+	border-radius: 0
+	line-height: 40px
+	box-shadow: 0 2px 5px rgba(0,0,0,0.2)
+
+	&:hover, &:active, &:focus
+		background: #f26417
+		color: #fff
+
+	&:visited
+		&:hover, &:active, &:focus
+			background: #f26417
+			color: #fff
+
+.p-rel
+	position: relative
 
 @import "style-adaptive.sass"

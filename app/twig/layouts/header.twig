@@ -1,5 +1,5 @@
 <header>
-    <div class="gray">
+    <div class="gray p-rel">
         <div class="container">
             <ul class="row achievements-b">
                 <li class="col-md-3 hidden-lg">
@@ -54,6 +54,9 @@
                 </li>
             </ul>
         </div>
+        <div class="btn-close-wrap">
+            <i class="ico btn-close"></i>
+        </div>
     </div>
     <div class="tracery"></div>
     <div class="service-b">
@@ -61,14 +64,29 @@
             <div class="row service-b__row">
                 <div class="col-md-4 service-b__col">
                     <div class="call-b">
-                        <a class="call-b__link" href="tel:+78007757715">8-800-775-77-15</a>
-                        <div>Москва и м.о.</div>
-                        <p class="call-b__action">бесплатно по России</p>
+                        <div class="dropdown call-b__tel-b">
+                            <span class="dropdown-toggle call-b__link" data-toggle="dropdown">8-800-775-77-15</span>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                                <li>
+                                    <p>Заказ по телефону:<br>
+                                    <span class="text-gray">круглосуточно, 24/7</span></p>
+                                </li>
+                                <li>
+                                    <p class="mb-25">Обработка заказов:<br>
+                                    <span class="text-gray">ежедневно, 09:00 — 21:00</span></p>
+                                </li>
+                                <li class="text-center">
+                                    <button class="btn btn-default">Обратный звонок</button>
+                                </li>
+                            </ul>
+                            <p class="call-b__text text-gray">бесплатно по России</p>
+                        </div>
+                        <div class="call-b__dd call-b__text text-gray arrow-down">Москва и м.о.</div>
                     </div>
                 </div>
                 <div class="col-md-4 text-center service-b__col">
                     <div class="logo-b">
-                        <a class="logo-b__link">
+                        <a class="logo-b__link" href="#">
                             <img class="logo-b__img" src="images/logo.png">
                         </a>
                     </div>
@@ -76,12 +94,16 @@
                 <div class="col-md-4 service-b__col">
                     <div class="service-b__int-b">
                         <div class="service-b__entry-b">
-                            <i class="ico ico-man"></i>
-                            <span>Войти</span>
+                            <div class="service-b__ico-wrap">
+                                <i class="ico ico-man"></i>
+                            </div>
+                            <span class="service-b__btn">Вход</span>
                         </div>
                         <div class="service-b__save-b">
-                            <i class="ico ico-heart"></i>
-                            <span>Сохранено</span>
+                            <div class="service-b__ico-wrap">
+                                <i class="ico ico-heart"></i>
+                            </div>
+                            <span class="service-b__btn">Сохранено</span>
                         </div>
                     </div>
                 </div>
@@ -90,17 +112,22 @@
     </div>
     <div class="navbar">
         <div class="container">
-            <div class="navbar-header">
+            <nav class="navbar-left">
                 <ul class="navbar-nav">
-                    <li>О Karatov</li>
-                    <li>Ювелирные украшения</li>
-                    <li>Коллекции</li>
-                    <li>Клуб покупателей</li>
-                    <li>Где купить</li>
+                    <li><a href="#">О Karatov</a></li>
+                    <li><a href="#">Ювелирные украшения</a></li>
+                    <li><a href="#">Коллекции</a></li>
+                    <li><a href="#">Клуб покупателей</a></li>
+                    <li><a href="#">Где купить</a></li>
                 </ul>
-                <div>
-                    <input type="text" title="search">
-                </div>
+            </nav>
+            <div class="navbar-right">
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" title="search">
+                        <button type="submit"><i class="ico ico-magnifier"></i></button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

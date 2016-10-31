@@ -10,6 +10,17 @@
   At the bottom of this section, we provide information about the spritesheet itself
   $spritesheet: width height image $spritesheet-sprites
   */
+$cross-name: 'cross'
+$cross-x: 25px
+$cross-y: 50px
+$cross-offset-x: -25px
+$cross-offset-y: -50px
+$cross-width: 13px
+$cross-height: 13px
+$cross-total-width: 74px
+$cross-total-height: 71px
+$cross-image: '../images/sprite.png'
+$cross: (25px, 50px, -25px, -50px, 13px, 13px, 74px, 71px, '../images/sprite.png', 'cross', )
 $factory-name: 'factory'
 $factory-x: 0px
 $factory-y: 28px
@@ -32,6 +43,17 @@ $heart-total-width: 74px
 $heart-total-height: 71px
 $heart-image: '../images/sprite.png'
 $heart: (26px, 28px, -26px, -28px, 26px, 22px, 74px, 71px, '../images/sprite.png', 'heart', )
+$magnifier-name: 'magnifier'
+$magnifier-x: 52px
+$magnifier-y: 28px
+$magnifier-offset-x: -52px
+$magnifier-offset-y: -28px
+$magnifier-width: 18px
+$magnifier-height: 19px
+$magnifier-total-width: 74px
+$magnifier-total-height: 71px
+$magnifier-image: '../images/sprite.png'
+$magnifier: (52px, 28px, -52px, -28px, 18px, 19px, 74px, 71px, '../images/sprite.png', 'magnifier', )
 $man-name: 'man'
 $man-x: 0px
 $man-y: 0px
@@ -76,6 +98,17 @@ $twentyfive-total-width: 74px
 $twentyfive-total-height: 71px
 $twentyfive-image: '../images/sprite.png'
 $twentyfive: (23px, 0px, -23px, 0px, 25px, 25px, 74px, 71px, '../images/sprite.png', 'twentyfive', )
+$cross-2x-name: 'cross@2x'
+$cross-2x-x: 50px
+$cross-2x-y: 100px
+$cross-2x-offset-x: -50px
+$cross-2x-offset-y: -100px
+$cross-2x-width: 26px
+$cross-2x-height: 26px
+$cross-2x-total-width: 148px
+$cross-2x-total-height: 142px
+$cross-2x-image: '../images/sprite@2x.png'
+$cross-2x: (50px, 100px, -50px, -100px, 26px, 26px, 148px, 142px, '../images/sprite@2x.png', 'cross@2x', )
 $factory-2x-name: 'factory@2x'
 $factory-2x-x: 0px
 $factory-2x-y: 56px
@@ -98,6 +131,17 @@ $heart-2x-total-width: 148px
 $heart-2x-total-height: 142px
 $heart-2x-image: '../images/sprite@2x.png'
 $heart-2x: (52px, 56px, -52px, -56px, 52px, 44px, 148px, 142px, '../images/sprite@2x.png', 'heart@2x', )
+$magnifier-2x-name: 'magnifier@2x'
+$magnifier-2x-x: 104px
+$magnifier-2x-y: 56px
+$magnifier-2x-offset-x: -104px
+$magnifier-2x-offset-y: -56px
+$magnifier-2x-width: 36px
+$magnifier-2x-height: 38px
+$magnifier-2x-total-width: 148px
+$magnifier-2x-total-height: 142px
+$magnifier-2x-image: '../images/sprite@2x.png'
+$magnifier-2x: (104px, 56px, -104px, -56px, 36px, 38px, 148px, 142px, '../images/sprite@2x.png', 'magnifier@2x', )
 $man-2x-name: 'man@2x'
 $man-2x-x: 0px
 $man-2x-y: 0px
@@ -145,12 +189,12 @@ $twentyfive-2x: (46px, 0px, -46px, 0px, 50px, 50px, 148px, 142px, '../images/spr
 $spritesheet-width: 74px
 $spritesheet-height: 71px
 $spritesheet-image: '../images/sprite.png'
-$spritesheet-sprites: ($factory, $heart, $man, $rowsup, $shop, $twentyfive, )
+$spritesheet-sprites: ($cross, $factory, $heart, $magnifier, $man, $rowsup, $shop, $twentyfive, )
 $spritesheet: (74px, 71px, '../images/sprite.png', $spritesheet-sprites, )
 $retina-spritesheet-width: 148px
 $retina-spritesheet-height: 142px
 $retina-spritesheet-image: '../images/sprite@2x.png'
-$retina-spritesheet-sprites: ($factory-2x, $heart-2x, $man-2x, $rowsup-2x, $shop-2x, $twentyfive-2x, )
+$retina-spritesheet-sprites: ($cross-2x, $factory-2x, $heart-2x, $magnifier-2x, $man-2x, $rowsup-2x, $shop-2x, $twentyfive-2x, )
 $retina-spritesheet: (148px, 142px, '../images/sprite@2x.png', $retina-spritesheet-sprites, )
 
 /*
@@ -158,10 +202,14 @@ $retina-spritesheet: (148px, 142px, '../images/sprite@2x.png', $retina-spriteshe
 
   The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
   */
+$cross-group-name: 'cross'
+$cross-group: ('cross', $cross, $cross-2x, )
 $factory-group-name: 'factory'
 $factory-group: ('factory', $factory, $factory-2x, )
 $heart-group-name: 'heart'
 $heart-group: ('heart', $heart, $heart-2x, )
+$magnifier-group-name: 'magnifier'
+$magnifier-group: ('magnifier', $magnifier, $magnifier-2x, )
 $man-group-name: 'man'
 $man-group: ('man', $man, $man-2x, )
 $rowsup-group-name: 'rowsup'
@@ -170,7 +218,7 @@ $shop-group-name: 'shop'
 $shop-group: ('shop', $shop, $shop-2x, )
 $twentyfive-group-name: 'twentyfive'
 $twentyfive-group: ('twentyfive', $twentyfive, $twentyfive-2x, )
-$retina-groups: ($factory-group, $heart-group, $man-group, $rowsup-group, $shop-group, $twentyfive-group, )
+$retina-groups: ($cross-group, $factory-group, $heart-group, $magnifier-group, $man-group, $rowsup-group, $shop-group, $twentyfive-group, )
 
 /*
   The provided mixins are intended to be used with the array-like variables

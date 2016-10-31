@@ -3,5 +3,33 @@
 {% block pageTitle %}KARATOV{% endblock %}
 
 {% block content %}
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active" style="background: url('images/rings.png'); background-size: cover">
+                <div class="item__text">
+                    <h1>Моя история</h1>
+                    <p>Каждый из нас — уникальный, ни на кого не похожий мир. Создайте неповторимое украшение и расскажите о себе.
+                    </p>
+                    <a class="btn btn_white">Перейти к коллекции</a>
+                </div>
+            </div>
+        </div>
 
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="arrow-left" aria-hidden="true"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="arrow-right" aria-hidden="true"></span>
+        </a>
+
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+    </div>
 {% endblock %}
