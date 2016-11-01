@@ -3,15 +3,40 @@
 {% block pageTitle %}KARATOV{% endblock %}
 
 {% block content %}
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div id="myCarousel" class="carousel slide slider-b" data-ride="carousel">
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
-            <div class="item active" style="background: url('images/rings.png'); background-size: cover">
-                <div class="item__text">
-                    <h1>Моя история</h1>
-                    <p>Каждый из нас — уникальный, ни на кого не похожий мир. Создайте неповторимое украшение и расскажите о себе.
-                    </p>
-                    <a class="btn btn_white">Перейти к коллекции</a>
+            <div class="item slider-b__item active">
+                <div class="prop-bg" style="background: url('images/rings.png') center, center; background-size: cover"></div>
+                <div class="container slider-b__container">
+                    <div class="slider-b__text-box">
+                        <h1 class="clean mb-30">Моя история</h1>
+                        <p class="mb-25">Каждый из нас — уникальный, ни на кого не похожий мир. Создайте неповторимое украшение и расскажите о себе.
+                        </p>
+                        <a class="btn btn_white">Перейти к коллекции</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item slider-b__item">
+                <div class="prop-bg" style="background: url('images/rings.png') center, center; background-size: cover"></div>
+                <div class="container slider-b__container">
+                    <div class="slider-b__text-box">
+                        <h1 class="clean mb-30">Моя история</h1>
+                        <p class="mb-25">Каждый из нас — уникальный, ни на кого не похожий мир. Создайте неповторимое украшение и расскажите о себе.
+                        </p>
+                        <a class="btn btn_white">Перейти к коллекции</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item slider-b__item">
+                <div class="prop-bg" style="background: url('images/rings.png') center, center; background-size: cover"></div>
+                <div class="container slider-b__container">
+                    <div class="slider-b__text-box">
+                        <h1 class="clean mb-30">Моя история</h1>
+                        <p class="mb-25">Каждый из нас — уникальный, ни на кого не похожий мир. Создайте неповторимое украшение и расскажите о себе.
+                        </p>
+                        <a class="btn btn_white">Перейти к коллекции</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -29,7 +54,46 @@
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
-            <li data-target="#myCarousel" data-slide-to="3"></li>
         </ol>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="masonry-b__brick">
+                            <div class="prop-bg" style="background: url('images/limitless.jpg') center, center; background-size: cover"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="masonry-b__brick">
+                            <div class="prop-bg" style="background: url('images/frame.png') center, center; background-size: cover"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="masonry-b__brick">
+                            <div class="prop-bg" style="background: url('images/pink-gold.jpg') center, center; background-size: cover"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="prop-bg">
+                    <div class="masonry-b__brick">
+                        <div class="prop-bg" style="background: url('images/couple.jpg') center, center; background-size: cover"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="prop-bg"></div>
+            </div>
+            <div class="col-md-4">
+                <div class="prop-bg"></div>
+            </div>
+            <div class="col-md-4">
+                <div class="prop-bg"></div>
+            </div>
+        </div>
     </div>
 {% endblock %}

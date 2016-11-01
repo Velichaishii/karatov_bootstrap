@@ -65,26 +65,28 @@
                 <div class="col-md-4 service-b__col">
                     <div class="call-b">
                         <div class="dropdown call-b__tel-b">
-                            <span class="dropdown-toggle call-b__link" data-toggle="dropdown">8-800-775-77-15</span>
-                            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                                <li>
-                                    <p>Заказ по телефону:<br>
-                                    <span class="text-gray">круглосуточно, 24/7</span></p>
-                                </li>
-                                <li>
-                                    <p class="mb-25">Обработка заказов:<br>
-                                    <span class="text-gray">ежедневно, 09:00 — 21:00</span></p>
-                                </li>
-                                <li class="text-center">
+                            <span class="dropdown-toggle call-b__btn" data-toggle="dropdown">8-800-775-77-15</span>
+                            <div class="dropdown-menu call-b__ddm" role="menu" aria-labelledby="dropdownMenu">
+                                <ul class="clean call-b__list">
+                                    <li class="call-b__item">
+                                        <p class="clean">Заказ по телефону:</p>
+                                        <p class="clean text-gray">круглосуточно, 24/7</p>
+                                    </li>
+                                    <li class="call-b__item">
+                                        <p class="clean">Обработка заказов:</p>
+                                        <p class="clean text-gray">ежедневно, 09:00 — 21:00</p>
+                                    </li>
+                                </ul>
+                                <div class="text-center">
                                     <button class="btn btn-default">Обратный звонок</button>
-                                </li>
-                            </ul>
+                                </div>
+                            </div>
                             <p class="call-b__text text-gray">бесплатно по России</p>
                         </div>
                         <div class="call-b__dd call-b__text text-gray arrow-down">Москва и м.о.</div>
                     </div>
                 </div>
-                <div class="col-md-4 text-center service-b__col">
+                <div class="col-md-4 service-b__col">
                     <div class="logo-b">
                         <a class="logo-b__link" href="#">
                             <img class="logo-b__img" src="images/logo.png">
@@ -92,41 +94,35 @@
                     </div>
                 </div>
                 <div class="col-md-4 service-b__col">
-                    <div class="service-b__int-b">
-                        <div class="service-b__entry-b">
-                            <div class="service-b__ico-wrap">
-                                <i class="ico ico-man"></i>
-                            </div>
+                    <ul class="service-b__list">
+                        <li class="service-b__item">
+                            <i class="ico ico-man mr-10"></i>
                             <span class="service-b__btn">Вход</span>
-                        </div>
-                        <div class="service-b__save-b">
-                            <div class="service-b__ico-wrap">
-                                <i class="ico ico-heart"></i>
-                            </div>
+                        </li>
+                        <li class="service-b__item">
+                            <i class="ico ico-heart mr-10"></i>
                             <span class="service-b__btn">Сохранено</span>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-    <div class="navbar">
+    <div class="navbar menu-header">
         <div class="container">
-            <nav class="navbar-left">
-                <ul class="navbar-nav">
-                    <li><a href="#">О Karatov</a></li>
-                    <li><a href="#">Ювелирные украшения</a></li>
-                    <li><a href="#">Коллекции</a></li>
-                    <li><a href="#">Клуб покупателей</a></li>
-                    <li><a href="#">Где купить</a></li>
+            <nav class="navbar-left menu-header__left-b">
+                <ul class="navbar-nav menu-header__list">
+                    <li class="menu-header__item"><a class="menu-header__link" href="#">О Karatov</a></li>
+                    <li class="menu-header__item"><a class="menu-header__link" href="#">Ювелирные украшения</a></li>
+                    <li class="menu-header__item"><a class="menu-header__link" href="#">Коллекции</a></li>
+                    <li class="menu-header__item"><a class="menu-header__link" href="#">Клуб покупателей</a></li>
+                    <li class="menu-header__item"><a class="menu-header__link" href="#">Где купить</a></li>
                 </ul>
             </nav>
-            <div class="navbar-right">
-                <form>
-                    <div class="form-group">
-                        <input type="text" class="form-control" title="search">
-                        <button type="submit"><i class="ico ico-magnifier"></i></button>
-                    </div>
+            <div class="navbar-right menu-header__right-b">
+                <form class="menu-header__form">
+                    <input type="text" class="form-control menu-header__entry-field" title="search">
+                    <button type="submit" class="menu-header__btn"><i class="ico ico-magnifier"></i></button>
                 </form>
             </div>
         </div>
