@@ -404,6 +404,37 @@
 
 
 
+.b-m-grid__item__title
+	line-height: 1.2em
+	margin-bottom: 20px
+	font-family: $cl
+	text-transform: uppercase
+	font-size: 31px
+	&.brush-icon
+		padding-top: 60px
+		position: relative
+		&:before
+			content: ''
+			+sprite(brush-icon, "abs_middle")
+			top: 0 !important
+			margin-top: 0 !important
+	&.map-icon
+		padding-top: 80px
+		margin-bottom: 0
+		display: inline-block
+		vertical-align: middle
+		position: relative
+		&:before
+			content: ''
+			+sprite(map-icon, "abs_middle")
+			top: 0 !important
+			margin-top: 0 !important
+	&.txt_white
+		color: #fff
+	&.mb0
+		margin-bottom: 0
+
+
 
 
 @import "style-adaptive.sass"
