@@ -44,22 +44,20 @@
 	right: 10px
 
 .service-b
-	height: 151px
-	padding: 30px 0
+	height: 150px
+	padding: 25px 0
 	border-bottom: 1px solid #e0e1e1
 
-.service-b__container
-	height: 100%
-
-.service-b__row
-	height: 100%
-
-.service-b__col
-	height: 100%
-
 .service-b__item
-	display: flex
 	margin-right: 15%
+
+	&:last-child
+		margin-right: 0
+
+.service-b__toggle
+	display: flex
+	position: relative
+	z-index: 20
 	align-items: center
 	cursor: pointer
 
@@ -70,12 +68,9 @@
 			&:hover, &:active, &:focus
 				color: #f45302
 
-	&:last-child
-		margin-right: 0
-
 .call-b
 	display: flex
-	height: 100%
+	height: 100px
 	align-items: center
 
 .call-b__tel-b
@@ -85,6 +80,7 @@
 
 .call-b__dd
 	cursor: pointer
+	+trans()
 
 	&:hover, &:active, &:focus
 		color: #f45302
@@ -109,21 +105,6 @@
 				text-decoration: none
 				color: #f45302
 
-.call-b__ddm
-	width: 285px
-	padding: 110px 40px 20px 40px
-	margin-top: 0
-	background: #fff
-	border: none
-	-webkit-border-radius: 0
-	-moz-border-radius: 0
-	border-radius: 0
-	box-shadow: 0 2px 5px rgba(0,0,0,0.2)
-	position: absolute
-	top: 10px
-	left: -40px
-	z-index: 10
-
 .call-b__list
 	padding-bottom: 10px
 
@@ -141,6 +122,7 @@
 	font-size: 15px
 
 .logo-b
+	height: 100px
 	display: flex
 	align-items: center
 	justify-content: center
@@ -154,14 +136,35 @@
 
 .service-b__list
 	display: flex
-	height: 100%
+	height: 100px
 	align-items: center
 	justify-content: flex-end
 
-.service-b__btn
+.service-b__label
 	font-family: Circle-Light
 	font-size: 15px
 	cursor: pointer
+	+trans()
+
+.save-b__item
+	height: 70px
+	padding: 15px 18px
+	border-top: 1px solid #eff0f0
+	display: flex
+	align-items: center
+	justify-content: space-between
+	font-size: 0
+
+	&:last-child
+		padding-bottom: 1px solid #eff0f0
+
+.save-b__text
+	font-size: 15px
+
+.save-b__text-strike
+	text-decoration: line-through
+	font-size: 11px
+	color: #999999
 
 .menu-header
 	padding: 10px 0
@@ -182,13 +185,22 @@
 
 .menu-header__link
 	padding: 0
-	position: relative
 	text-transform: uppercase
 	font-family: Circle-Regular
 	font-size: 15px
 	line-height: 15px
 	+trans()
 
+	&:hover, &:active, &:focus
+		text-decoration: none
+		color: #f45302
+
+	&:visited
+		&:hover, &:active, &:focus
+			color: #f45302
+
+.line-orange-anim
+	position: relative
 	&:after
 		content: ""
 		display: block
@@ -202,16 +214,8 @@
 		+trans()
 
 	&:hover, &:active, &:focus
-		text-decoration: none
-		color: #f45302
-
 		&:after
 			width: 100%
-
-	&:visited
-		&:hover, &:active, &:focus
-			color: #f45302
-			border-bottom: 1px solid #f45302
 
 .menu-header__right-b
 	width: 22%
@@ -247,7 +251,6 @@
 	transform: translateX(-50%)
 
 .slider-b__text-box
-	width: 40%
 	font-size: 17px
 	position: absolute
 	top: 50%
@@ -292,17 +295,280 @@
 	right: 20px
 	transform: translateY(-50%) rotate(135deg)
 
-.masonry-b__brick
-	position:  relative
-	overflow: hidden
+.filter-b
+	padding: 40px 0
+
+.filter-b__list
+	display: flex
+	height: 40px
+	margin-bottom: 0
+	align-items: center
+	justify-content: flex-start
+
+	&_brdr
+		position: relative
+
+		&:after
+			content: ""
+			display: block
+			width: 1px
+			height: 50px
+			border-right: 1px dotted #a1a1a1
+			position: absolute
+			top: 50%
+			right: -5px
+			transform: translateY(-50%)
+
+	&_pl
+		padding-left: 40px
+
+.filter-b__item
+	margin-right: 15%
+	position: relative
+	flex: 0 1 auto
+	font-family: Circle-Light
+	font-size: 17px
+	line-height: 19px
+
+	&:last-child
+		margin-right: 0
+
+.filter-b__label
+	cursor: pointer
+	+trans()
+
+	&_first
+		text-transform: uppercase
+		font-size: 15px
+
+	&_dd
+		vertical-align: middle
+		font-size: 15px
+
+	&:hover
+		color: #f26218
+
+.filter-b__switch
+	width: 100%
+	height: 100%
+	margin: 0
+	position: absolute
+	top: 0
+	left: 0
+	opacity: 0
+	z-index: -10
+	cursor: pointer
+
+	&:checked + .line-orange-anim
+		color: #f26218
+
+		&:after
+			width: 100%
+
+.filter-b__btn
+	float: right
+
+.filter-b__item-dd-fst-lvl
+	margin-bottom: 10px
+	position: relative
+
+.filter-b__tumbler
+	display: block
+	width: 100%
+	height: 100%
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 10
+	opacity: 0
+	cursor: pointer
+
+	&:checked + .checkbox,
+	&:checked + .radio
+		border-color: #f9b897
+
+	&_checkbox
+		&:checked + .checkbox
+			&:before
+				content: ""
+				transform: rotate(-45deg) scale(1)
+				opacity: 1
+
+	&_radio
+		&:checked + .radio
+			&:before
+				content: ""
+				transform: translate(-50%, -50%) scale(1)
+				opacity: 1
+
+	&:hover ~ .filter-b__label
+		color: #f26218
+
+.filter-b__parent
+	margin-bottom: 10px
+	position: relative
+
+.filter-b__list-dd-snd-lvl
+	padding-left: 30px
+
+.filter-b__item-dd-snd-lvl
+	margin-bottom: 10px
+	position: relative
+
+	&:first-child
+		&:before
+			height: 20px
+
+	&:last-child
+		&:before
+			content: ""
+			display: block
+			width: 1px
+			height: 15px
+			background: #eeeeee
+			position: absolute
+			top: -3px
+			left: -21px
+			transform: translateY(0)
 
 	&:before
 		content: ""
-		margin-top: 70%
 		display: block
+		width: 1px
+		height: 50px
+		background: #eeeeee
+		position: absolute
+		top: 50%
+		left: -21px
+		transform: translateY(-50%)
 
+	&:after
+		content: ""
+		display: block
+		width: 15px
+		height: 1px
+		background: #eeeeee
+		position: absolute
+		top: 50%
+		left: -20px
 
+.masonry-b__brick
+	display: block
+	margin: 0 2% 2% 0
+	position: relative
+	overflow: hidden
 
+	&_left
+		float: left
+
+		&:before
+			content: ""
+			display: block
+			margin-top: 100%
+
+		&-small
+			width: 32%
+
+		&-big
+			width: 66%
+
+			&:before
+
+				content: ""
+				display: block
+				margin-top: 50%
+	&_right
+		width: 32%
+		float: right
+		margin-right: 0
+
+		&:before
+			content: ""
+			display: block
+			margin-top: 209%
+
+	&:hover
+		.masonry-b__bg
+			transform: scale(1.1)
+
+.masonry-b__bg
+	display: block
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	+trans()
+
+.masonry-b__content-b
+	display: block
+	width: 100%
+	height: 100%
+	position: absolute
+	top: 0
+	left: 0
+	color: #000
+
+	&:hover, &:active, &:focus
+		color: #000
+
+	&:visited
+		&:hover, &:active, &:focus
+			color: #000
+
+.masonry-b__limitles-b
+	padding: 10% 10%
+	position: absolute
+	bottom: 0
+	left: 0
+
+.masonry-b__gift-b
+	padding: 15% 7% 5% 7%
+	background: #fff
+	position: absolute
+	top: 20px
+	bottom: 20px
+	left: 20px
+	right: 20px
+	font-size: 17px
+
+.masonry-b__p-wrap
+	padding: 0 10px
+
+.masonry-b__collection-b
+	padding: 7% 10% 10% 10%
+	background: #fff
+	position: absolute
+	bottom: 30px
+	left: 30px
+	right: 30px
+	font-size: 17px
+
+.masonry-b__pink-gold-b
+	padding: 10% 20% 5% 5%
+	position: absolute
+	top: 0
+	right: 0
+	font-size: 17px
+
+.masonry-b__circle-b
+	padding: 22% 12% 12% 12%
+	background: #fff
+	-webkit-border-radius: 50%
+	-moz-border-radius: 50%
+	border-radius: 50%
+	position: absolute
+	top: 10%
+	bottom: 10%
+	left: 10%
+	right: 10%
+	font-size: 17px
+
+.masonry-b__paris-b
+	padding: 10% 10%
+	position: absolute
+	top: 0
+	left: 0
 
 
 .mb-25
@@ -313,15 +579,24 @@
 .mr-10
 	margin-right: 10px
 
-.text-gray
-	color: #9a9ea0
+.mr-0
+	margin-right: 0
 
-.gray
+.p-rel
+	position: relative
+
+.bg-gray
 	background: #3c5568
 
 .tracery
 	height: 8px
 	background: url("../images/tracery.jpg")
+
+.text-gray
+	color: #9a9ea0
+
+.text-white
+	color: #fff
 
 .ico
 	display: inline-block
@@ -360,6 +635,12 @@
 .ico-magnifier
 	+retina-sprite($magnifier-group)
 
+.ico-branch
+	+retina-sprite($branch-group)
+
+.ico-marker
+	+retina-sprite($marker-group)
+
 .arrow-down
 	padding-right: 15px
 	position: relative
@@ -371,14 +652,39 @@
 		border-right: 2px solid #c8c5c4
 		border-bottom: 2px solid #c8c5c4
 		position: absolute
-		top: 5px
+		top: 30%
 		right: 0
 		+rotate(45)
 		+trans()
 
+	&:hover, &:focus &:active
+		&:before
+			border-right: 2px solid #f26218
+			border-bottom: 2px solid #f26218
+
+.circle-red
+	width: 15px
+	height: 15px
+	padding: 0 3px
+	-webkit-border-radius: 50%
+	-moz-border-radius: 50%
+	border-radius: 50%
+	background: #f45302
+	position: absolute
+	top: -5px
+	right: 3px
+	text-align: center
+	font-family: Circle-Light
+	font-size: 12px
+	color: #fff
+
 .btn-close
 	cursor: pointer
 	+retina-sprite($cross-group)
+
+.btn-close-gray
+	cursor: pointer
+	+retina-sprite($crossgray-group)
 
 .btn_white
 	padding: 0 20px
@@ -388,6 +694,7 @@
 	border-radius: 0
 	line-height: 40px
 	box-shadow: 0 2px 5px rgba(0,0,0,0.2)
+	+trans()
 
 	&:hover, &:active, &:focus
 		background: #f26417
@@ -398,42 +705,53 @@
 			background: #f26417
 			color: #fff
 
-.p-rel
-	position: relative
+.dropdown-menu
+	&_call-b
+		width: 285px
+		padding: 110px 40px 20px 40px
+		position: absolute
+		top: 10px
+		left: -40px
+		z-index: 10
 
-
-
-
-.b-m-grid__item__title
-	line-height: 1.2em
-	margin-bottom: 20px
-	font-family: $cl
-	text-transform: uppercase
-	font-size: 31px
-	&.brush-icon
+	&_save-b
+		width: 200px
 		padding-top: 60px
-		position: relative
-		&:before
-			content: ''
-			+sprite(brush-icon, "abs_middle")
-			top: 0 !important
-			margin-top: 0 !important
-	&.map-icon
-		padding-top: 80px
-		margin-bottom: 0
-		display: inline-block
-		vertical-align: middle
-		position: relative
-		&:before
-			content: ''
-			+sprite(map-icon, "abs_middle")
-			top: 0 !important
-			margin-top: 0 !important
-	&.txt_white
-		color: #fff
-	&.mb0
-		margin-bottom: 0
+		position: absolute
+		top: -20px
+		left: -15px
+		z-index: 10
 
+	&_filter-b
+		width: 180px
+		padding: 20px
+		position: absolute
+		top: calc(100% + 10px)
+		left: -5px
+		z-index: 10
+		font-family: Circle-Light
+		font-size: 17px
+		line-height: 19px
+
+		&:before
+			content: ""
+			border-left: 7px solid transparent
+			border-right: 7px solid transparent
+			border-bottom: 7px solid #fff
+			position: absolute
+			top: -7px
+			left: 17px
+			z-index: 10
+
+		&:after
+			content: ""
+			border-left: 8px solid transparent
+			border-right: 8px solid transparent
+			border-bottom: 8px solid rgba(100,100,100,0.1)
+			position: absolute
+			top: -8px
+			left: 16px
+			z-index: 0
 
 
 

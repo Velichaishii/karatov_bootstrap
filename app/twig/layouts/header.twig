@@ -1,5 +1,5 @@
 <header>
-    <div class="gray p-rel">
+    <div class="bg-gray p-rel">
         <div class="container">
             <ul class="row achievements-b">
                 <li class="col-md-3 hidden-lg">
@@ -60,13 +60,13 @@
     </div>
     <div class="tracery"></div>
     <div class="service-b">
-        <div class="container service-b__container">
-            <div class="row service-b__row">
-                <div class="col-md-4 service-b__col">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
                     <div class="call-b">
                         <div class="dropdown call-b__tel-b">
                             <span class="dropdown-toggle call-b__btn" data-toggle="dropdown">8-800-775-77-15</span>
-                            <div class="dropdown-menu call-b__ddm" role="menu" aria-labelledby="dropdownMenu">
+                            <div class="dropdown-menu dropdown-menu_call-b" role="menu" aria-labelledby="dropdownMenu">
                                 <ul class="clean call-b__list">
                                     <li class="call-b__item">
                                         <p class="clean">Заказ по телефону:</p>
@@ -86,22 +86,53 @@
                         <div class="call-b__dd call-b__text text-gray arrow-down">Москва и м.о.</div>
                     </div>
                 </div>
-                <div class="col-md-4 service-b__col">
+                <div class="col-md-4">
                     <div class="logo-b">
                         <a class="logo-b__link" href="#">
                             <img class="logo-b__img" src="images/logo.png">
                         </a>
                     </div>
                 </div>
-                <div class="col-md-4 service-b__col">
+                <div class="col-md-4">
                     <ul class="service-b__list">
                         <li class="service-b__item">
-                            <i class="ico ico-man mr-10"></i>
-                            <span class="service-b__btn">Вход</span>
+                            <div class="service-b__toggle">
+                                <i class="ico ico-man mr-10"></i>
+                                <span class="service-b__label">Вход</span>
+                            </div>
                         </li>
                         <li class="service-b__item">
-                            <i class="ico ico-heart mr-10"></i>
-                            <span class="service-b__btn">Сохранено</span>
+                            <div class="dropdown">
+                                <div class="dropdown-toggle service-b__toggle" data-toggle="dropdown">
+                                    <div class="p-rel">
+                                        <i class="ico ico-heart mr-10"></i>
+                                        <div class="circle-red">3</div>
+                                    </div>
+                                    <span class="service-b__label">Сохранено</span>
+                                </div>
+                                <div class="dropdown-menu dropdown-menu_save-b" role="menu" aria-labelledby="dropdownMenu">
+                                    <ul>
+                                        <li class="save-b__item">
+                                            <img src="images/ring.png">
+                                            <span class="save-b__text">55 000 р</span>
+                                            <span><i class="ico btn-close-gray"></i></span>
+                                        </li>
+                                        <li class="save-b__item">
+                                            <img src="images/earring.png">
+                                            <div>
+                                                <div class="save-b__text">12 000 р</div>
+                                                <div class="save-b__text-strike">18 000 р</div>
+                                            </div>
+                                            <span><i class="ico btn-close-gray"></i></span>
+                                        </li>
+                                        <li class="save-b__item">
+                                            <img src="images/ring.png">
+                                            <span class="save-b__text">55 000 р</span>
+                                            <span><i class="ico btn-close-gray"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -112,11 +143,11 @@
         <div class="container">
             <nav class="navbar-left menu-header__left-b">
                 <ul class="navbar-nav menu-header__list">
-                    <li class="menu-header__item"><a class="menu-header__link" href="#">О Karatov</a></li>
-                    <li class="menu-header__item"><a class="menu-header__link" href="#">Ювелирные украшения</a></li>
-                    <li class="menu-header__item"><a class="menu-header__link" href="#">Коллекции</a></li>
-                    <li class="menu-header__item"><a class="menu-header__link" href="#">Клуб покупателей</a></li>
-                    <li class="menu-header__item"><a class="menu-header__link" href="#">Где купить</a></li>
+                    <li class="menu-header__item"><a class="menu-header__link line-orange-anim" href="#">О Karatov</a></li>
+                    <li class="menu-header__item"><a class="menu-header__link line-orange-anim" href="#">Ювелирные украшения</a></li>
+                    <li class="menu-header__item"><a class="menu-header__link line-orange-anim" href="#">Коллекции</a></li>
+                    <li class="menu-header__item"><a class="menu-header__link line-orange-anim" href="#">Клуб покупателей</a></li>
+                    <li class="menu-header__item"><a class="menu-header__link line-orange-anim" href="#">Где купить</a></li>
                 </ul>
             </nav>
             <div class="navbar-right menu-header__right-b">

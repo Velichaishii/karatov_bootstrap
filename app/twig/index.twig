@@ -3,7 +3,7 @@
 {% block pageTitle %}KARATOV{% endblock %}
 
 {% block content %}
-    <div id="myCarousel" class="carousel slide slider-b" data-ride="carousel">
+    <section id="myCarousel" class="carousel slide slider-b" data-ride="carousel">
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item slider-b__item active">
@@ -11,7 +11,7 @@
                 <div class="container slider-b__container">
                     <div class="slider-b__text-box">
                         <h1 class="clean mb-30">Моя история</h1>
-                        <p class="mb-25">Каждый из нас — уникальный, ни на кого не похожий мир. Создайте неповторимое украшение и расскажите о себе.
+                        <p class="mb-25">Каждый из нас — уникальный, ни на кого не похожий мир.<br>Создайте неповторимое украшение и расскажите о себе.
                         </p>
                         <a class="btn btn_white">Перейти к коллекции</a>
                     </div>
@@ -22,7 +22,7 @@
                 <div class="container slider-b__container">
                     <div class="slider-b__text-box">
                         <h1 class="clean mb-30">Моя история</h1>
-                        <p class="mb-25">Каждый из нас — уникальный, ни на кого не похожий мир. Создайте неповторимое украшение и расскажите о себе.
+                        <p class="mb-25">Каждый из нас — уникальный, ни на кого не похожий мир.<br>Создайте неповторимое украшение и расскажите о себе.
                         </p>
                         <a class="btn btn_white">Перейти к коллекции</a>
                     </div>
@@ -33,7 +33,7 @@
                 <div class="container slider-b__container">
                     <div class="slider-b__text-box">
                         <h1 class="clean mb-30">Моя история</h1>
-                        <p class="mb-25">Каждый из нас — уникальный, ни на кого не похожий мир. Создайте неповторимое украшение и расскажите о себе.
+                        <p class="mb-25">Каждый из нас — уникальный, ни на кого не похожий мир.<br>Создайте неповторимое украшение и расскажите о себе.
                         </p>
                         <a class="btn btn_white">Перейти к коллекции</a>
                     </div>
@@ -55,9 +55,155 @@
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
         </ol>
-    </div>
+    </section>
 
-    <div class="container">
+    <section class="container">
+        <form class="filter-b">
+            <div class="row">
+                <div class="col-md-4">
+                    <ul class="filter-b__list filter-b__list_brdr">
+                        <li class="filter-b__item">
+                            <span class="filter-b__label filter-b__label_first text-gray">Я ИЩУ:</span></li>
+                        <li class="filter-b__item">
+                            <input type="radio" id="filter-switch-gift" class="filter-b__switch" title="filter-switch" name="filter-switch">
+                            <label for="filter-switch-gift" class="filter-b__label line-orange-anim">В подарок</label>
+                        </li>
+                        <li class="filter-b__item">
+                            <input type="radio" id="filter-switch-himself" class="filter-b__switch" title="filter-switch" name="filter-switch">
+                            <label for="filter-switch-himself" class="filter-b__label line-orange-anim">Для себя</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-5">
+                    <ul class="filter-b__list filter-b__list_pl">
+                        <li class="filter-b__item"><span class="filter-b__label arrow-down">Вид</span></li>
+                        <li class="filter-b__item">
+                            <div class="dropdown">
+                                <span class="dropdown-toggle filter-b__label arrow-down" data-toggle="dropdown">Металл</span>
+                                <div class="dropdown-menu dropdown-menu_filter-b" role="menu" aria-labelledby="dropdownMenu">
+                                    <ul class="filter-b__list-dd-fst-lvl">
+                                        <li class="filter-b__item-dd-fst-lvl">
+                                            <div>
+                                                <div class="filter-b__parent">
+                                                    <input type="checkbox" class="filter-b__tumbler filter-b__tumbler_checkbox" title="filter-checkbox">
+                                                    <i class="checkbox"></i>
+                                                    <label class="filter-b__label filter-b__label_dd">Золото</label>
+                                                </div>
+                                                <ul class="filter-b__list-dd-snd-lvl">
+                                                    <li class="filter-b__item-dd-snd-lvl">
+                                                        <input type="checkbox" class="filter-b__tumbler filter-b__tumbler_checkbox" title="filter-checkbox">
+                                                        <i class="checkbox"></i>
+                                                        <label class="filter-b__label filter-b__label_dd">Красное</label>
+                                                    </li>
+                                                    <li class="filter-b__item-dd-snd-lvl">
+                                                        <input type="checkbox" class="filter-b__tumbler filter-b__tumbler_checkbox" title="filter-checkbox">
+                                                        <i class="checkbox"></i>
+                                                        <label class="filter-b__label filter-b__label_dd">Желтое</label>
+                                                    </li>
+                                                    <li class="filter-b__item-dd-snd-lvl">
+                                                        <input type="checkbox" class="filter-b__tumbler filter-b__tumbler_checkbox" title="filter-checkbox">
+                                                        <i class="checkbox"></i>
+                                                        <label class="filter-b__label filter-b__label_dd">Белое</label>
+                                                    </li>
+                                                    <li class="filter-b__item-dd-snd-lvl">
+                                                        <input type="checkbox" class="filter-b__tumbler filter-b__tumbler_checkbox" title="filter-checkbox">
+                                                        <i class="checkbox"></i>
+                                                        <label class="filter-b__label filter-b__label_dd">Мультицвет</label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="filter-b__item-dd-fst-lvl">
+                                            <input type="radio" class="filter-b__tumbler filter-b__tumbler_radio" title="filter-checkbox" name="metal">
+                                            <i class="radio"></i>
+                                            <label class="filter-b__label filter-b__label_dd">Платина</label>
+                                        </li>
+                                        <li class="filter-b__item-dd-fst-lvl">
+                                            <input type="radio" class="filter-b__tumbler filter-b__tumbler_radio" title="filter-checkbox" name="metal">
+                                            <i class="radio"></i>
+                                            <label class="filter-b__label filter-b__label_dd">Серебро</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="filter-b__item"><span class="filter-b__label arrow-down">Вставка</span></li>
+                        <li class="filter-b__item"><span class="filter-b__label arrow-down">Цена</span></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-default filter-b__btn">Подобрать из <span>32 540</span></button>
+                </div>
+            </div>
+        </form>
+    </section>
 
-    </div>
+    <section class="container">
+        <a class="masonry-b__brick masonry-b__brick_left masonry-b__brick_left-small" href="#">
+            <div class="masonry-b__bg" style="background: url('images/limitless.jpg') no-repeat center, center; background-size: cover"></div>
+            <div class="masonry-b__content-b">
+                <div class="masonry-b__limitles-b">
+                    <h2 class="text-white mb-25">Karatov бесконечность</h2>
+                    <span class="btn btn_white">Перейти к коллекции</span>
+                </div>
+            </div>
+        </a>
+        <a class="masonry-b__brick masonry-b__brick_left masonry-b__brick_left-small" href="#">
+            <div class="masonry-b__bg" style="background: url('images/tracery-masonry.jpg') no-repeat center, center; background-size: cover"></div>
+            <div class="masonry-b__content-b">
+                <div class="masonry-b__gift-b text-center">
+                    <i class="ico ico-branch"></i>
+                    <h2 class="mb-25">Идеи подарков KARATOV</h2>
+                    <div class="masonry-b__p-wrap">
+                        <p>Каждый из наших друзей уникальный, ни на кого не похожий мир</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a class="masonry-b__brick masonry-b__brick_right" href="#">
+            <div class="masonry-b__bg" style="background: url('images/couple.jpg') no-repeat center, center; background-size: cover"></div>
+            <div class="masonry-b__content-b">
+                <div class="masonry-b__collection-b text-center">
+                    <h2 class="mb-25">Солнечные коллекции</h2>
+                    <p>Каждый из нас — уникальный, ни на кого  не похожий мир</p>
+                </div>
+            </div>
+        </a>
+        <a class="masonry-b__brick masonry-b__brick_left masonry-b__brick_left-big" href="#">
+            <div class="masonry-b__bg" style="background: url('images/pink-gold.jpg') no-repeat center, center; background-size: cover"></div>
+            <div class="masonry-b__content-b">
+                <div class="masonry-b__pink-gold-b">
+                    <h2 class="mb-25">Розовое золото</h2>
+                    <span class="btn btn_white">Перейти к коллекции</span>
+                </div>
+            </div>
+        </a>
+        <a class="masonry-b__brick masonry-b__brick_left masonry-b__brick_left-small" href="#">
+            <div class="masonry-b__bg" style="background: url('images/map.jpg') no-repeat center, center; background-size: cover"></div>
+            <div class="masonry-b__content-b">
+                <div class="masonry-b__circle-b text-center">
+                    <i class="ico ico-marker"></i>
+                    <h2 class="mb-25">Где купить?</h2>
+                </div>
+            </div>
+        </a>
+        <a class="masonry-b__brick masonry-b__brick_left masonry-b__brick_left-small" href="#">
+            <div class="masonry-b__bg" style="background: url('images/woman.jpg') no-repeat center, center; background-size: cover"></div>
+            <div class="masonry-b__content-b">
+                <div class="masonry-b__limitles-b">
+                    <h2 class="text-white mb-25">Karatov change</h2>
+                    <span class="btn btn_white">Перейти к коллекции</span>
+                </div>
+            </div>
+        </a>
+        <a class="masonry-b__brick masonry-b__brick_left masonry-b__brick_left-small mr-0" href="#">
+            <div class="masonry-b__bg" style="background: url('images/paris.jpg') no-repeat center, center; background-size: cover"></div>
+            <div class="masonry-b__content-b">
+                <div class="masonry-b__paris-b">
+                    <h2 class="mb-25">Karatov change</h2>
+                    <span class="btn btn_white">Перейти к коллекции</span>
+                </div>
+            </div>
+        </a>
+    </section>
 {% endblock %}

@@ -6,6 +6,15 @@
 .container
 	padding: 0
 
+.dropdown-menu
+	margin-top: 0
+	background: #fff
+	border: none
+	-webkit-border-radius: 0
+	-moz-border-radius: 0
+	border-radius: 0
+	box-shadow: 0 2px 5px rgba(0,0,0,0.2)
+
 .navbar-nav
 	>li
 		>a
@@ -83,10 +92,79 @@ a
 		margin: 3px
 		background: #f2641a
 
+.checkbox
+	display: inline-block
+	vertical-align: middle
+	width: 18px
+	height: 18px
+	margin: 0 5px 0 0
+	border: 1px solid #dcddde
+	-webkit-border-radius: 3px
+	-moz-border-radius: 3px
+	border-radius: 3px
+	position: relative
+	+trans()
+
+	&:before
+		content: ""
+		display: block
+		width: 10px
+		height: 5px
+		border-left: 2px solid #f9b897
+		border-bottom: 2px solid #f9b897
+		position: absolute
+		top: 20%
+		left: 20%
+		opacity: 0
+		transform: rotate(-45deg) scale(2)
+		+trans()
+
+.radio
+	display: inline-block
+	vertical-align: middle
+	width: 18px
+	height: 18px
+	margin: 0 5px 0 0
+	border: 1px solid #dcddde
+	-webkit-border-radius: 50%
+	-moz-border-radius: 50%
+	border-radius: 50%
+	position: relative
+	+trans()
+
+	&:before
+		content: ""
+		display: block
+		width: 5px
+		height: 5px
+		background: #f9b897
+		-webkit-border-radius: 50%
+		-moz-border-radius: 50%
+		border-radius: 50%
+		position: absolute
+		top: 50%
+		left: 50%
+		opacity: 0
+		transform: translate(-50%, -50%) scale(4)
+		+trans()
+
 h1
 	text-transform: uppercase
 	font-family: Circle-Light
 	font-size: 43px
 
+h2
+	text-transform: uppercase
+	font-family: Circle-Light
+	font-size: 31px
+	line-height: 40px
+
 p
 	font-family: Circle-Light
+
+input[type="radio"], input[type="checkbox"]
+	margin-top: 0
+
+label
+	margin-bottom: 0
+	font-weight: normal
