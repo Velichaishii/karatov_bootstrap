@@ -89,22 +89,6 @@
 			&:hover, &:active, &:focus
 				color: #f45302
 
-.call-b__btn
-	font-size: 26px
-	cursor: pointer
-	position: relative
-	z-index: 20
-	+trans()
-
-	&:hover, &:active, &:focus
-		text-decoration: none
-		color: #f45302
-
-		&:visited
-			&:hover, &:active, &:focus
-				text-decoration: none
-				color: #f45302
-
 .call-b__list
 	padding-bottom: 10px
 
@@ -249,6 +233,7 @@
 	top: 0
 	left: 50%
 	transform: translateX(-50%)
+	font-family: Circle-Light
 
 .slider-b__text-box
 	font-size: 17px
@@ -333,13 +318,13 @@
 	&:last-child
 		margin-right: 0
 
+.filter-b__text
+	text-transform: uppercase
+	font-size: 15px
+
 .filter-b__label
 	cursor: pointer
 	+trans()
-
-	&_first
-		text-transform: uppercase
-		font-size: 15px
 
 	&_dd
 		vertical-align: middle
@@ -347,6 +332,7 @@
 
 	&:hover
 		color: #f26218
+
 
 .filter-b__switch
 	width: 100%
@@ -451,6 +437,9 @@
 		position: absolute
 		top: 50%
 		left: -20px
+
+.masonry-b
+	font-family: Circle-Light
 
 .masonry-b__brick
 	display: block
@@ -570,17 +559,269 @@
 	top: 0
 	left: 0
 
+.carousel-b
+	padding: 50px 0 30px 0
+	font-family: Circle-Light
+	position: relative
+
+	&:after
+		content: ""
+		display: block
+		height: 1px
+		width: 100%
+		background: #e0e1e1
+		position: absolute
+		bottom: 40px
+		left: 0
+		z-index: 0
+
+.owl-carousel
+	padding: 0 50px 0 50px
+
+	.owl-nav
+		.owl-prev
+			width: 50px
+			height: 90%
+			background: none
+			position: absolute
+			top: 0
+			left: 0
+			font-size: 0
+			opacity: 1
+			+trans()
+
+			&:hover
+				background: #efefef
+				opacity: 1
+
+			&:before
+				display: block
+				content: ""
+				width: 20px
+				height: 20px
+				border-top: 2px solid #a7a9ac
+				border-left: 2px solid #a7a9ac
+				position: absolute
+				top: 50%
+				left: 20px
+				transform: translateY(-50%) rotate(-45deg)
+
+		.owl-next
+			width: 50px
+			height: 90%
+			background: none
+			position: absolute
+			top: 0
+			right: 0
+			font-size: 0
+			opacity: 1
+			+trans()
+
+			&:hover
+				background: #efefef
+				opacity: 1
+
+			&:before
+				content: ""
+				display: block
+				width: 20px
+				height: 20px
+				border-top: 2px solid #a7a9ac
+				border-left: 2px solid #a7a9ac
+				position: absolute
+				top: 50%
+				right: 20px
+				transform: translateY(-50%) rotate(135deg)
+
+.carousel-b__caption
+	font-size: 17px
+
+.carousel-b__item
+	padding: 2px 2px 4px 2px
+
+.product-b
+	padding: 30px 10px 20px 10px
+	+trans()
+
+	&:hover
+		box-shadow: 0 2px 5px rgba(0,0,0,0.2)
+
+		.product-b__slide-toggle-box
+			opacity: 1
+
+		.product-b__popup
+			opacity: 1
+
+.product-b__infographics
+	padding: 0 10px
+	position: relative
+	z-index: 50
+
+.product-b__circle
+	width: 30px
+	height: 30px
+	margin-left: 5px
+	border: 2px solid #e9e3de
+	-webkit-border-radius: 50%
+	-moz-border-radius: 50%
+	border-radius: 50%
+	float: right
+	line-height: 30px
+	text-transform: uppercase
+	text-align: center
+	font-family: Circle-Regular
+	font-style: normal
+	font-size: 10px
+	color: #b18b78
+
+.product-b__link-img
+	display: block
+	height: 180px
+	margin-bottom: 10px
+	position: relative
+
+.product-b__price
+	font-family: Circle-Regular
+	font-size: 20px
+
+.product-b__description
+	font-family: Circle-Light
+	font-size: 12px
+	color: #9a9ea0
+
+.product-b__popup
+	opacity: 0
+	padding-top: 10px
+	+trans()
+
+.product-b__slide-box
+	display: block
+	width: 100%
+	height: 100%
+	position: relative
+
+.product-b__slide
+	display: block
+	width: 100%
+	height: 100%
+	line-height: 180px
+	position: absolute
+	top: 0
+	left: 0
+	overflow: hidden
+	z-index: 0
+	opacity: 0
+	+trans()
+
+	&.active
+		z-index: 10
+		opacity: 1
+
+.product-b__img
+	width: 100%
+
+.product-b__slide-toggle-box
+	margin-bottom: 0
+	display: block
+	width: 100%
+	height: 100%
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 20
+	font-size: 0
+	opacity: 0
+	+trans()
+
+.product-b__slide-toggle
+	display: inline-block
+	width: 44px
+	height: 100%
+	margin-right: 1px
+	border-bottom: 2px solid #d5d5d5
+	+trans()
+
+	&:last-child
+		margin-right: 0
+
+	&:hover
+		border-bottom: 2px solid #f26417
+
+.feedback-b
+	height: 105px
+	background: url("../images/feedback-bg.jpg") no-repeat #f0ebe6
+
+.footer
+	padding: 65px 0 50px 0
+	position: relative
+	font-family: Circle-Regular
+	font-size: 12px
+
+.soc-b
+	margin-bottom: 35px
+
+.soc-b__item
+	display: inline-block
+	margin-right: 10px
+	font-size: 0
+
+.soc-b__link
+	display: block
+	font-size: 0
+
+.nav
+	display: flex
+	align-items: flex-start
+	justify-content: space-between
+
+.nav__col
+	flex: 1 0 auto
+
+.nav__item
+	margin-bottom: 7px
+	color: #a5a5a5
+
+	&:first-child
+		margin-bottom: 14px
+
+		.nav__link
+			text-transform: uppercase
+			color: #000
+
+.nav__link
+	color: #a5a5a5
+
+.design-b
+	text-align: right
+	font-size: 14px
+
+
 
 .mb-25
 	margin-bottom: 25px
 .mb-30
 	margin-bottom: 30px
 
-.mr-10
-	margin-right: 10px
+.mb-40
+	margin-bottom: 40px
 
 .mr-0
 	margin-right: 0
+
+.ml-5
+	margin-left: 5px
+
+.mr-5
+	margin-right: 5px
+
+.mr-10
+	margin-right: 10px
+
+.f-l
+	float: left
+
+.f-r
+	float: right
 
 .p-rel
 	position: relative
@@ -588,9 +829,23 @@
 .bg-gray
 	background: #3c5568
 
-.tracery
-	height: 8px
-	background: url("../images/tracery.jpg")
+.tracery-header
+	&:after
+		content: ""
+		display: block
+		height: 8px
+		background: url("../images/tracery.jpg")
+
+.tracery-footer
+	&:before
+		content: ""
+		display: block
+		width: 100%
+		height: 8px
+		background: url("../images/tracery.jpg")
+		position: absolute
+		top: 0
+		left: 0
 
 .text-gray
 	color: #9a9ea0
@@ -641,6 +896,24 @@
 .ico-marker
 	+retina-sprite($marker-group)
 
+.ico-f
+	+retina-sprite($f-group)
+
+.ico-instagram
+	+retina-sprite($instagram-group)
+
+.ico-vk
+	+retina-sprite($vk-group)
+
+.ico-classmates
+	+retina-sprite($classmates-group)
+
+.ico-brilliant
+	+retina-sprite($brilliant-group)
+
+.ico-check
+	+retina-sprite($check-group)
+
 .arrow-down
 	padding-right: 15px
 	position: relative
@@ -678,6 +951,22 @@
 	font-size: 12px
 	color: #fff
 
+.tel
+	font-size: 26px
+	cursor: pointer
+	position: relative
+	z-index: 20
+	+trans()
+
+	&:hover, &:active, &:focus
+		text-decoration: none
+		color: #f45302
+
+		&:visited
+			&:hover, &:active, &:focus
+				text-decoration: none
+				color: #f45302
+
 .btn-close
 	cursor: pointer
 	+retina-sprite($cross-group)
@@ -694,6 +983,7 @@
 	border-radius: 0
 	line-height: 40px
 	box-shadow: 0 2px 5px rgba(0,0,0,0.2)
+	text-transform: uppercase
 	+trans()
 
 	&:hover, &:active, &:focus
@@ -705,6 +995,29 @@
 			background: #f26417
 			color: #fff
 
+.btn_orange
+	padding: 0 40px
+	background: #f26417
+	border: 1px solid #f26417
+	-webkit-border-radius: 0
+	-moz-border-radius: 0
+	border-radius: 0
+	line-height: 40px
+	text-transform: uppercase
+	color: #fff
+	+trans()
+
+	&:hover, &:active, &:focus
+		background: none
+		border: 1px solid #000
+		color: #000
+
+	&:visited
+		&:hover, &:active, &:focus
+			background: #f26417
+			border: 1px solid #000
+			color: #000
+
 .dropdown-menu
 	&_call-b
 		width: 285px
@@ -713,6 +1026,7 @@
 		top: 10px
 		left: -40px
 		z-index: 10
+		font-family: Circle-Light
 
 	&_save-b
 		width: 200px
@@ -721,6 +1035,7 @@
 		top: -20px
 		left: -15px
 		z-index: 10
+		font-family: Circle-Light
 
 	&_filter-b
 		width: 180px
