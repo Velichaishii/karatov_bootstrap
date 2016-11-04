@@ -131,22 +131,46 @@
 	+trans()
 
 .save-b__item
-	height: 70px
-	padding: 15px 18px
+	padding: 15px 0
 	border-top: 1px solid #eff0f0
-	display: flex
-	align-items: center
-	justify-content: space-between
 	font-size: 0
 
-	&:last-child
-		padding-bottom: 1px solid #eff0f0
+.save-b__img-cont
+	display: inline-block
+	vertical-align: middle
+	width: 55px
+	height: 55px
+	padding-left: 10px
+
+.save-b__img-wrap
+	width: 100%
+	height: 100%
+	position: relative
+	overflow: hidden
+
+.save-b__img
+	display: block
+	width: 100%
+	height: auto
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+
+.save-b__text-box
+	display: inline-block
+	vertical-align: middle
+	width: 120px
+	padding: 0 10px
+	text-align: center
 
 .save-b__text
+	font-family: Circle-Regular
 	font-size: 15px
 
 .save-b__text-strike
 	text-decoration: line-through
+	font-family: Circle-Light
 	font-size: 11px
 	color: #999999
 
@@ -560,28 +584,31 @@
 	left: 0
 
 .carousel-b
-	padding: 50px 0 30px 0
 	font-family: Circle-Light
-	position: relative
 
-	&:after
-		content: ""
-		display: block
-		height: 1px
-		width: 100%
-		background: #e0e1e1
-		position: absolute
-		bottom: 40px
-		left: 0
-		z-index: 0
+	&_catalog
+		padding-top: 30px
+		position: relative
+
+		&:after
+			content: ""
+			display: block
+			height: 1px
+			width: 100%
+			background: #e0e1e1
+			position: absolute
+			bottom: 20px
+			left: 0
+			z-index: 0
+
+	&_reviews
+		padding: 25px 0 65px 0
+		border-bottom: 1px solid #e0e1e1
 
 .owl-carousel
-	padding: 0 50px 0 50px
-
 	.owl-nav
 		.owl-prev
 			width: 50px
-			height: 90%
 			background: none
 			position: absolute
 			top: 0
@@ -608,7 +635,6 @@
 
 		.owl-next
 			width: 50px
-			height: 90%
 			background: none
 			position: absolute
 			top: 0
@@ -633,17 +659,63 @@
 				right: 20px
 				transform: translateY(-50%) rotate(135deg)
 
-.carousel-b__caption
+.owl-carousel_catalog
+	padding: 0 50px
+
+	.owl-nav
+		.owl-prev
+			height: 90%
+
+		.owl-next
+			height: 90%
+
+	.carousel-b__item
+		padding: 2px 2px 4px 2px
+
+.owl-carousel_reviews
+	padding: 0 55px
+	margin-bottom: 30px
+
+	.owl-nav
+		.owl-prev
+			height: 100%
+
+		.owl-next
+			height: 100%
+
+	.reviews-b
+		font-size: 0
+
+.reviews-b__photo
+	display: inline-block
+	vertical-align: top
+	width: 90px
+	height: 90px
+	background: url("../images/man-medium.png") #f7f7f7 no-repeat center center
+	-webkit-border-radius: 50%
+	-moz-border-radius: 50%
+	border-radius: 50%
+	position: relative
+
+.reviews-b__text
+	display: inline-block
+	vertical-align: top
+	width: calc(100% - 90px)
+	padding: 10px 30px 0 20px
+	font-size: 15px
+
+.reviews-b__author
 	font-size: 17px
 
-.carousel-b__item
-	padding: 2px 2px 4px 2px
+.carousel-b__caption
+	font-size: 17px
 
 .product-b
 	padding: 30px 10px 20px 10px
 	+trans()
 
 	&:hover
+		background: #fff
 		box-shadow: 0 2px 5px rgba(0,0,0,0.2)
 
 		.product-b__slide-toggle-box
@@ -690,8 +762,8 @@
 	color: #9a9ea0
 
 .product-b__popup
-	opacity: 0
 	padding-top: 10px
+	opacity: 0
 	+trans()
 
 .product-b__slide-box
@@ -747,9 +819,49 @@
 	&:hover
 		border-bottom: 2px solid #f26417
 
+.shop-descript-b
+	padding: 70px 0 90px 0
+
+.shop-descript-b__text
+	font-family: Circle-Light
+	font-size: 16px
+
+.shop-descript-b__link
+	border-bottom: 1px dotted #000
+	cursor: pointer
+	+trans()
+
+	&:hover, &:focus, &:active
+		border-bottom: 1px dotted #f26417
+		color: #f26417
+
+	&:visited
+		&:hover, &:focus, &:active
+			border-bottom: 1px dotted #f26417
+			color: #f26417
+
 .feedback-b
 	height: 105px
+	padding: 25px 0
 	background: url("../images/feedback-bg.jpg") no-repeat #f0ebe6
+	font-family: Circle-Light
+
+.feedback-b__caption
+	text-transform: uppercase
+	font-family: Circle-Regular
+	font-size: 19px
+
+.feedback-b__form
+	padding: 5px 0
+
+.feedback-b__col
+	display: inline-block
+	vertical-align: top
+	width: 33.33%
+	padding-right: 10px
+
+	&:last-child
+		padding-right: 0
 
 .footer
 	padding: 65px 0 50px 0
@@ -797,8 +909,12 @@
 
 
 
+.mb-20
+	margin-bottom: 20px
+
 .mb-25
 	margin-bottom: 25px
+
 .mb-30
 	margin-bottom: 30px
 
@@ -914,6 +1030,12 @@
 .ico-check
 	+retina-sprite($check-group)
 
+.ico-heart-black
+	+retina-sprite($heartblack-group)
+
+.ico-heart-orange
+	+retina-sprite($heartorange-group)
+
 .arrow-down
 	padding-right: 15px
 	position: relative
@@ -972,6 +1094,7 @@
 	+retina-sprite($cross-group)
 
 .btn-close-gray
+	vertical-align: middle
 	cursor: pointer
 	+retina-sprite($crossgray-group)
 
@@ -1018,6 +1141,83 @@
 			border: 1px solid #000
 			color: #000
 
+.checkbox-save
+	display: inline-block
+	position: relative
+
+.checkbox-save__input
+	display: block
+	width: 100%
+	height: 100%
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 10
+	opacity: 0
+	cursor: pointer
+
+	&:hover + .checkbox-save__ico-box
+		.checkbox-save__ico_first
+			opacity: 0
+
+		.checkbox-save__ico_second
+			opacity: 1
+
+	&:checked + .checkbox-save__ico-box
+		.checkbox-save__ico_first
+			opacity: 0
+
+		.checkbox-save__ico_second
+			opacity: 1
+
+	&:checked ~ .checkbox-save__label
+		.checkbox-save__text-first
+			display: none
+
+		.checkbox-save__text-second
+			display: inline
+
+.checkbox-save__ico-box
+	display: inline-block
+	margin-right: 5px
+	vertical-align: top
+	width: 30px
+	height: 30px
+	position: relative
+
+.checkbox-save__ico
+	display: block
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	+trans()
+
+	&_second
+		opacity: 0
+
+.checkbox-save__label
+	display: inline-block
+	vertical-align: top
+	height: 30px
+	padding-top: 2px
+	position: relative
+	font-family: Circle-Regular
+	font-size: 15px
+	line-height: 28px
+
+.checkbox-save__text-first
+	display: inline
+
+.checkbox-save__text-second
+	display: none
+
+.entry-field
+	height: 40px
+
+	&_feedback-b
+		width: 100%
+
 .dropdown-menu
 	&_call-b
 		width: 285px
@@ -1035,7 +1235,6 @@
 		top: -20px
 		left: -15px
 		z-index: 10
-		font-family: Circle-Light
 
 	&_filter-b
 		width: 180px
@@ -1068,6 +1267,10 @@
 			left: 16px
 			z-index: 0
 
+.form-group
+	&_feedback-b
+		margin-bottom: 0
+		font-size: 0
 
 
 @import "style-adaptive.sass"

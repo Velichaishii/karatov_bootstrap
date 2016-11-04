@@ -7,15 +7,30 @@ $(document).ready(function() {
         $(".owl-carousel").owlCarousel();
     });
 
-    $(".owl-carousel").owlCarousel({
+    $(".owl-carousel_catalog").owlCarousel({
         nav: true,
-        dots: true,
         responsive : {
             320 : {
-                items: 2
+                items: 2,
+                dots: true
             },
             768 : {
-                items: 5
+                items: 5,
+                dots: false
+            }
+        }
+    });
+
+    $(".owl-carousel_reviews").owlCarousel({
+        nav: true,
+        responsive : {
+            320 : {
+                items: 1,
+                dots: true
+            },
+            768 : {
+                items: 2,
+                dots: false
             }
         }
     });
